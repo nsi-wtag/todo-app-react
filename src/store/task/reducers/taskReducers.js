@@ -1,12 +1,12 @@
-import { todoActionTypes } from "../types/todoTypes";
+import { taskActionTypes } from "../types/taskTypes";
 
-const { ADD_TASK } = todoActionTypes;
+const { ADD_TASK } = taskActionTypes;
 
 const initialTasksState = {
   tasks: [],
 };
 
-export const todoReducer = (state = initialTasksState, action) => {
+export const taskReducer = (state = initialTasksState, action) => {
   switch (action.type) {
     case ADD_TASK: {
       return {
