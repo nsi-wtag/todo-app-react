@@ -1,24 +1,12 @@
+import PropTypes from "prop-types";
 import "./TaskNavBar.scss";
-import { addTask } from "../../store/todo/actions/todoActions";
-import { useDispatch } from "react-redux";
 
-function TaskNavBar() {
-  const dispatch = useDispatch();
-
-  const todo = {
-    id: Date.now(),
-    task: "Todo 9",
-  };
-
-  function handleCreate(todo) {
-    dispatch(addTask(todo));
-  }
-
+function TaskNavBar({ onCreateButtonClicked }) {
   return (
     <>
       <h2>Add Tasks</h2>
       <nav className="navbar">
-        <button className="navbar__button" onClick={() => handleCreate(todo)}>
+        <button className="navbar__button" onClick={onCreateButtonClicked}>
           Create
         </button>
         <div className="navbar__filters">
@@ -30,5 +18,9 @@ function TaskNavBar() {
     </>
   );
 }
+
+TaskNavBar.propTypes = {
+  onCreateButtonClicked: PropTypes.func.isRequired,
+};
 
 export default TaskNavBar;
