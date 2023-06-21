@@ -3,7 +3,7 @@ import "./TaskCard.scss";
 
 function TaskCard({ taskTitle, createdAt }) {
   return (
-    <div className="grid-container__box">
+    <div className="tasks-container__box">
       <h3>{taskTitle}</h3>
       <p>Created At: {createdAt}</p>
     </div>
