@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import "./AddTaskCard.scss";
 import { sanitizeText } from "../../utils/sanitizeText";
+import "./AddTaskCard.scss";
 
 function AddTaskCard({ onCreateTask }) {
   const [taskTitle, setTaskTitle] = useState("");
