@@ -1,5 +1,8 @@
+@import "../../styles/variables";
+@import "../../styles/colors";
+
 .grid-container__box {
-  background-color: lightgray;
-  border: 1px solid gray;
-  border-radius: 5px;
+  background-color: $secondaryGray;
+  border: $sp-2 / 2 solid $primaryGray;
+  border-radius: $sp-4;
 }

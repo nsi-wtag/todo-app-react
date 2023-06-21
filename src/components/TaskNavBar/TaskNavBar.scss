@@ -1,14 +1,17 @@
+@import "../../styles/variables";
+@import "../../styles/colors";
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #f2f2f2;
+  padding: $sp-12;
+  background-color: $secondaryWhite;
 
   &__button {
-    padding: 5px 10px;
-    background-color: #333;
-    color: #fff;
+    padding: $sp-4 $sp-12;
+    background-color: $secondaryBlack;
+    color: $primaryWhite;
     border: none;
     cursor: pointer;
   }
@@ -17,18 +20,18 @@
     display: flex;
 
     & > .navbar__filter {
-      padding: 5px 10px;
-      background-color: #f2f2f2;
+      padding: $sp-4 $sp-12;
+      background-color: $secondaryWhite;
       border: none;
       cursor: pointer;
-      transition: background-color 0.3s;
+      transition: background-color $tt-03;
 
       &:hover {
-        background-color: #ccc;
+        background-color: $tartiaryGray
       }
 
       &:not(:last-child) {
-        margin-right: 5px;
+        margin-right: $sp-4;
       }
     }
   }

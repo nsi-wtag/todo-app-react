@@ -1,13 +1,16 @@
+@import "../../styles/variables";
+@import "../../styles/colors";
+
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  background-color: #f2f2f2;
-  margin-bottom: 25px;
+  padding: $sp-12;
+  background-color: $secondaryWhite;
+  margin-bottom: $sp-24;
 
   &__title {
-    font-size: 20px;
+    font-size: $sp-2 * 10;
     font-weight: bold;
   }
 
@@ -16,15 +19,15 @@
     align-items: center;
 
     input[type="text"] {
-      padding: 5px;
-      margin-right: 5px;
-      border: 1px solid #ccc;
+      padding: $sp-4;
+      margin-right: $sp-4;
+      border: $sp-2 / 2 solid $tartiaryGray;
     }
 
     button {
-      padding: 5px 10px;
-      background-color: #333;
-      color: #fff;
+      padding: $sp-4 $sp-12;
+      background-color: $secondaryBlack;
+      color: $primaryWhite;
       border: none;
     }
   }
