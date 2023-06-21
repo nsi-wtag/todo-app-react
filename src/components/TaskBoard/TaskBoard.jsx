@@ -25,7 +25,7 @@ function TaskBoard() {
     <>
       <TaskNavBar onCreateButtonClicked={handleCreateButton} />
 
-      <div className="grid-container">
+      <div className="tasks-container">
         {isCreateButtonClicked && (
           <AddTaskCard onCreateTask={handleCreateTask} />
         )}
