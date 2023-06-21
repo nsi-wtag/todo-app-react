@@ -4,17 +4,17 @@
     height: 70%;
     resize: none;
     border: none;
-    font-size: $sp-2 * 7;
+    font-size: calc($sp-2 * 7);
   }
 
   &__save-button {
     justify-self: end;
-    padding: $sp-2 * 2.5 $sp-2 * 5;
+    padding: calc($sp-2 * 2.5) calc($sp-2 * 5);
     background-color: $buttonPrimary;
     color: #fff;
     border: none;
     cursor: pointer;
-    font-size: $sp-2 * 7;
+    font-size: calc($sp-2 * 7);
 
     &-disabled {
       opacity: 0.5;

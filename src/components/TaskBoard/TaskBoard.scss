@@ -1,7 +1,7 @@
 .tasks-container {
   display: grid;
-  grid-template-columns: repeat(3, $sp-48 * 7.29);
-  grid-auto-rows: $sp-48 * 3.12;
+  grid-template-columns: repeat(3, calc($sp-48 * 7.29));
+  grid-auto-rows: calc($sp-48 * 3.12);
   gap: $sp-48;
   justify-content: center;
 }

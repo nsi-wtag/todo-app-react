@@ -7,7 +7,7 @@
   margin-bottom: $sp-24;
 
   &__title {
-    font-size: $sp-2 * 10;
+    font-size: calc($sp-2 * 10);
     font-weight: bold;
   }
 
@@ -18,7 +18,7 @@
     input[type="text"] {
       padding: $sp-4;
       margin-right: $sp-4;
-      border: $sp-2 / 2 solid $tartiaryGray;
+      border: calc($sp-2 / 2) solid $tartiaryGray;
     }
 
     button {
