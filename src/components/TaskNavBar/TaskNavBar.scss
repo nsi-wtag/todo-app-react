@@ -1,12 +1,13 @@
 @import "../../styles/variables";
 @import "../../styles/colors";
 
-.navbar {
+.task-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: $sp-12;
   background-color: $secondaryWhite;
+  margin-bottom: $sp-12;
 
   &__button {
     padding: $sp-4 $sp-12;
@@ -19,7 +20,7 @@
   &__filters {
     display: flex;
 
-    & > .navbar__filter {
+    & > .task-navbar__filter {
       padding: $sp-4 $sp-12;
       background-color: $secondaryWhite;
       border: none;
