@@ -10,14 +10,14 @@
     align-items: center;
     display: flex;
 
-    button {
+    &-button {
       background-color: $secondaryBlack;
       border: none;
       color: $primaryWhite;
       padding: $sp-4 $sp-12;
     }
 
-    input[type="text"] {
+    &-input {
       border: calc($sp-2 / 2) solid $tartiaryGray;
       margin-right: $sp-4;
       padding: $sp-4;
