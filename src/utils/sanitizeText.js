@@ -3,7 +3,7 @@ export function sanitizeText(text) {
   let sanitizedText = text.replace(/<\/?[^>]+(>|$)/g, "");
 
   // Trim leading and trailing whitespace
-  sanitizedText = sanitizedText.replace(/^\s+|\s+$/g, "");
+  sanitizedText = sanitizedText.trim();
 
   // Replace special characters or patterns
   const finalText = sanitizedText.replace(/[^\w.?! ]/g, "");
