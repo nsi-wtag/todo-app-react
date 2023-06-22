@@ -1,27 +1,28 @@
 .task-navbar {
+  align-items: center;
+  background-color: $secondaryWhite;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: $sp-12;
-  background-color: $secondaryWhite;
   margin-bottom: $sp-12;
+  padding: $sp-12;
 
   &__button {
-    padding: $sp-4 $sp-12;
     background-color: $secondaryBlack;
-    color: $primaryWhite;
     border: none;
+    color: $primaryWhite;
     cursor: pointer;
+    padding: $sp-4 $sp-12;
   }
 
   &__filters {
     display: flex;
 
     & > .task-navbar__filter {
-      padding: $sp-4 $sp-12;
       background-color: $secondaryWhite;
       border: none;
       cursor: pointer;
+      margin-right: $sp-4;
+      padding: $sp-4 $sp-12;
       transition: background-color $tt-03;
 
       &:hover {

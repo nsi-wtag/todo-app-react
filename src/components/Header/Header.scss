@@ -1,31 +1,31 @@
 .navbar {
+  align-items: center;
+  background-color: $secondaryWhite;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: $sp-12;
-  background-color: $secondaryWhite;
   margin-bottom: $sp-24;
+  padding: $sp-12;
+
+  &__search {
+    align-items: center;
+    display: flex;
+
+    button {
+      background-color: $secondaryBlack;
+      border: none;
+      color: $primaryWhite;
+      padding: $sp-4 $sp-12;
+    }
+
+    input[type="text"] {
+      border: calc($sp-2 / 2) solid $tartiaryGray;
+      margin-right: $sp-4;
+      padding: $sp-4;
+    }
+  }
 
   &__title {
     font-size: calc($sp-2 * 10);
     font-weight: bold;
-  }
-
-  &__search {
-    display: flex;
-    align-items: center;
-
-    input[type="text"] {
-      padding: $sp-4;
-      margin-right: $sp-4;
-      border: calc($sp-2 / 2) solid $tartiaryGray;
-    }
-
-    button {
-      padding: $sp-4 $sp-12;
-      background-color: $secondaryBlack;
-      color: $primaryWhite;
-      border: none;
-    }
   }
 }

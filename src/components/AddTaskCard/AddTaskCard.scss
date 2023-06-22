@@ -1,24 +1,24 @@
 .task {
-  &__textarea {
-    width: 98%;
-    height: 70%;
-    resize: none;
-    border: none;
-    font-size: calc($sp-2 * 7);
-  }
-
   &__save-button {
-    justify-self: end;
-    padding: calc($sp-2 * 2.5) calc($sp-2 * 5);
     background-color: $buttonPrimary;
-    color: $primaryWhite;
     border: none;
+    color: $primaryWhite;
     cursor: pointer;
     font-size: calc($sp-2 * 7);
+    justify-self: end;
+    padding: calc($sp-2 * 2.5) calc($sp-2 * 5);
 
     &-disabled {
-      opacity: 0.5;
       cursor: not-allowed;
+      opacity: 0.5;
     }
+  }
+
+  &__textarea {
+    border: none;
+    font-size: calc($sp-2 * 7);
+    height: 70%;
+    resize: none;
+    width: 98%;
   }
 }
