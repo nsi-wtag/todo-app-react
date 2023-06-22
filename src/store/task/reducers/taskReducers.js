@@ -1,4 +1,4 @@
-import { taskActionTypes } from "../types/taskTypes";
+import { taskActionTypes } from "src/store/task/types/taskTypes";
 
 const { ADD_TASK } = taskActionTypes;
 

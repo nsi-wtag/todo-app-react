@@ -1,4 +1,4 @@
-import TaskCard from "../TaskCard/TaskCard";
+import TaskCard from "src/components/TaskCard/TaskCard";
 
 function TaskList({ tasks }) {
   return tasks.map((task) => (

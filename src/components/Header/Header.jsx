@@ -1,4 +1,4 @@
-import { PLACEHOLDER_SEARCH_TASK } from "../../common/constants";
+import { PLACEHOLDER_SEARCH_TASK } from "src/common/constants";
 import "./Header.scss";
 
 function Header() {

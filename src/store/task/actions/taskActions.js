@@ -1,5 +1,5 @@
-import { taskActionTypes } from "../types/taskTypes";
-import { formatDate } from "../../../utils/formatDate";
+import { taskActionTypes } from "src/store/task/types/taskTypes";
+import { formatDate } from "src/utils/formatDate";
 
 const { ADD_TASK } = taskActionTypes;
 
