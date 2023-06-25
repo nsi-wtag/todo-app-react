@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { deleteTask, markTaskDone } from "src/store/task/actions/taskActions";
 import DeleteButton from "src/components/Buttons/DeleteButton/DeleteButton";
+import DoneButton from "../Buttons/DoneButton/DoneButton";
 import "./TaskCard.scss";
 
 function TaskCard({ taskId, taskTitle, createdAt, isTaskDone }) {
@@ -22,7 +23,7 @@ function TaskCard({ taskId, taskTitle, createdAt, isTaskDone }) {
 
       <div className="tasks-container__box-buttons">
         <DeleteButton onDelete={handleDeleteTask} />
-        <button onClick={handleTaskDone}>Task Done</button>
+        <DoneButton onDone={handleTaskDone} />
       </div>
     </div>
   );
