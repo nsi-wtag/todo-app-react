@@ -17,7 +17,7 @@ function AddTaskCard({ onCreateTask }) {
   }
 
   return (
-    <div>
+    <>
       <textarea
         className="task__textarea"
         autoFocus
@@ -34,7 +34,7 @@ function AddTaskCard({ onCreateTask }) {
       >
         Add Task
       </button>
-    </div>
+    </>
   );
 }
 
