@@ -1,6 +1,6 @@
 import { taskActionTypes } from "src/store/task/types/taskTypes";
 
-const { ADD_TASK } = taskActionTypes;
+const { ADD_TASK, DELETE_TASK } = taskActionTypes;
 
 const initialTasksState = {
   tasks: [],
@@ -12,6 +12,17 @@ export const taskReducer = (state = initialTasksState, action) => {
       return {
         ...state,
         tasks: [action.payload, ...state.tasks],
+      };
+    }
+
+    case DELETE_TASK: {
+      const filteredTasks = state.tasks.filter(
+        (task) => task.taskId !== action.payload
+      );
+
+      return {
+        ...state,
+        tasks: filteredTasks,
       };
     }
 
