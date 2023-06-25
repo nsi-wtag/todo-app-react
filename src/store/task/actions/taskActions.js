@@ -4,7 +4,7 @@ import { formatDate } from "src/utils/formatDate";
 const { ADD_TASK } = taskActionTypes;
 
 export const addTask = (task) => {
-  task.id = Date.now().toString();
+  task.taskId = Date.now().toString();
   task.createdAt = formatDate(new Date());
 
   return {
