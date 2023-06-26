@@ -27,7 +27,7 @@ function AddTaskCard({ onCreateTask }) {
 
       <button
         className={`task__save-button ${
-          isTaskButtonDisabled ? "task__save-button-disabled " : ""
+          isTaskButtonDisabled ? "task__save-button-disabled " : null
         }`}
         disabled={isTaskButtonDisabled}
         onClick={handleAddTask}
