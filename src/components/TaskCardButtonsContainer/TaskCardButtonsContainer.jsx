@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
+import { getDaysToCompleteTask } from "src/utils/compareDate";
 import DeleteButton from "src/components/Buttons/DeleteButton/DeleteButton";
 import DoneButton from "src/components/Buttons/DoneButton/DoneButton";
-import { getDaysToCompleteTask } from "src/utils/compareDate";
 
 function TaskCardButtonsContainer({
   isTaskDone,

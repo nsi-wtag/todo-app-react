@@ -2,8 +2,8 @@ import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { deleteTask, markTaskDone } from "src/store/task/actions/taskActions";
 import { formatDate } from "src/utils/formatDate";
-import "./TaskCard.scss";
 import TaskCardButtonsContainer from "../TaskCardButtonsContainer/TaskCardButtonsContainer";
+import "./TaskCard.scss";
 
 function TaskCard({ taskId, taskTitle, createdAt, taskDoneAt, isTaskDone }) {
   const dispatch = useDispatch();
