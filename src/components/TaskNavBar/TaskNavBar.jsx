@@ -1,4 +1,6 @@
 import PropTypes from "prop-types";
+import { FILTER_TASKS_BUTTON_TEXT_ARRAY } from "src/common/constants";
+import FilterButton from "../Buttons/FilterButton/FilterButton";
 import "./TaskNavBar.scss";
 
 function TaskNavBar({ onCreateButtonClick }) {
@@ -9,10 +11,11 @@ function TaskNavBar({ onCreateButtonClick }) {
         <button className="task-navbar__button" onClick={onCreateButtonClick}>
           Create
         </button>
+
         <div className="task-navbar__filters">
-          <button className="task-navbar__filter">All</button>
-          <button className="task-navbar__filter">Incomplete</button>
-          <button className="task-navbar__filter">Complete</button>
+          {FILTER_TASKS_BUTTON_TEXT_ARRAY.map((filterButtonText, index) => (
+            <FilterButton buttonText={filterButtonText} key={index} />
+          ))}
         </div>
       </nav>
     </>
