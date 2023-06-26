@@ -1,6 +1,6 @@
 .tasks-container__box {
-  background-color: $secondaryGray;
-  border: calc($sp-2 / 2) solid $primaryGray;
+  background-color: $colorSecondaryGray;
+  border: calc($sp-2 / 2) solid $colorPrimaryGray;
   border-radius: $sp-4;
 
   &-buttons {

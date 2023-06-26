@@ -1,9 +1,13 @@
 export function formatDate(date) {
-  const day = String(date.getDate()).padStart(2, "0");
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const year = String(date.getFullYear());
+  const dateFormatOptions = {
+    year: "2-digit",
+    month: "2-digit",
+    day: "2-digit",
+  };
 
-  const formattedDate = `${day}.${month}.${year}`;
+  const formattedDate = new Intl.DateTimeFormat("en-GB", dateFormatOptions)
+    .format(date) // this returns the date in: dd/mm/yy format
+    .replace(/\//g, "."); // this will replace the "/" with ".", so date will be in dd.mm.yy format
 
   return formattedDate;
 }
