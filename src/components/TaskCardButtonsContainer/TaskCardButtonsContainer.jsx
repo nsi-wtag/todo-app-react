@@ -16,8 +16,11 @@ function TaskCardButtonsContainer({
   return (
     <>
       <DeleteButton onDelete={handleDeleteTask} />
-      {!isTaskDone && <DoneButton onDone={handleTaskDone} />}
-      {isTaskDone && <p>{`Completed in ${numberOfDays} ${dayStr}`}</p>}
+      {isTaskDone ? (
+        <p>{`Completed in ${numberOfDays} ${dayStr}`}</p>
+      ) : (
+        <DoneButton onDone={handleTaskDone} />
+      )}
     </>
   );
 }
