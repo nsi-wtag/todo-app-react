@@ -1,0 +1,15 @@
+.tasks-container__box {
+  background-color: $colorSecondaryGray;
+  border: calc($sp-2 / 2) solid $colorPrimaryGray;
+  border-radius: $sp-4;
+
+  &-buttons {
+    display: flex;
+    gap: calc($sp-2 * 5);
+  }
+}
+
+.task_done {
+  color: $colorTaskGreen;
+  text-decoration: line-through;
+}
