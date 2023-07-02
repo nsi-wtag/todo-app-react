@@ -10,6 +10,7 @@ function TaskCardButtonsContainer({
   taskDoneAt,
   onDeleteTask,
   onTaskDone,
+  onEditTask,
 }) {
   const numberOfDays = getDaysToCompleteTask(createdAt, taskDoneAt);
   const dayStr = numberOfDays > 1 ? "days" : "day";
@@ -21,7 +22,7 @@ function TaskCardButtonsContainer({
         <p>{`Completed in ${numberOfDays} ${dayStr}`}</p>
       ) : (
         <>
-          <EditButton />
+          <EditButton onEdit={onEditTask} />
           <DoneButton onDone={onTaskDone} />
         </>
       )}
@@ -39,6 +40,7 @@ TaskCardButtonsContainer.propTypes = {
   taskDoneAt: PropTypes.instanceOf(Date),
   onDeleteTask: PropTypes.func.isRequired,
   onTaskDone: PropTypes.func.isRequired,
+  onEditTask: PropTypes.func.isRequired,
 };
 
 export default TaskCardButtonsContainer;
