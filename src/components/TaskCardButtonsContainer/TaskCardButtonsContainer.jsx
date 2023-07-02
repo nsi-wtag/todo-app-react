@@ -7,19 +7,19 @@ function TaskCardButtonsContainer({
   isTaskDone,
   createdAt,
   taskDoneAt,
-  handleDeleteTask,
-  handleTaskDone,
+  onDeleteTask,
+  onTaskDone,
 }) {
   const numberOfDays = getDaysToCompleteTask(createdAt, taskDoneAt);
   const dayStr = numberOfDays > 1 ? "days" : "day";
 
   return (
     <>
-      <DeleteButton onDelete={handleDeleteTask} />
+      <DeleteButton onDelete={onDeleteTask} />
       {isTaskDone ? (
         <p>{`Completed in ${numberOfDays} ${dayStr}`}</p>
       ) : (
-        <DoneButton onDone={handleTaskDone} />
+        <DoneButton onDone={onTaskDone} />
       )}
     </>
   );
@@ -33,8 +33,8 @@ TaskCardButtonsContainer.propTypes = {
   isTaskDone: PropTypes.bool.isRequired,
   createdAt: PropTypes.instanceOf(Date).isRequired,
   taskDoneAt: PropTypes.instanceOf(Date),
-  handleDeleteTask: PropTypes.func.isRequired,
-  handleTaskDone: PropTypes.func.isRequired,
+  onDeleteTask: PropTypes.func.isRequired,
+  onTaskDone: PropTypes.func.isRequired,
 };
 
 export default TaskCardButtonsContainer;

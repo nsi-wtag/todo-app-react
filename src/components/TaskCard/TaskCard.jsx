@@ -26,8 +26,8 @@ function TaskCard({ taskId, taskTitle, createdAt, taskDoneAt, isTaskDone }) {
           isTaskDone={isTaskDone}
           createdAt={createdAt}
           taskDoneAt={taskDoneAt}
-          handleDeleteTask={handleDeleteTask}
-          handleTaskDone={handleTaskDone}
+          onDeleteTask={handleDeleteTask}
+          onTaskDone={handleTaskDone}
         />
       </div>
     </div>
