@@ -5,11 +5,11 @@
 
   &-buttons {
     display: flex;
-    gap: 10px;
+    gap: calc($sp-2 * 5);
   }
 }
 
 .task_done {
-  color: #0BC375;
+  color: $colorTaskGreen;
   text-decoration: line-through;
 }
