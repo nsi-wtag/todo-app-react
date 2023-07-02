@@ -18,7 +18,7 @@ function TaskCard({ taskId, taskTitle, createdAt, taskDoneAt, isTaskDone }) {
 
   return (
     <div className="tasks-container__box">
-      <h3 className={`${isTaskDone ? "task_done" : ""}`}>{taskTitle}</h3>
+      <h3 className={`${isTaskDone && "task_done"}`}>{taskTitle}</h3>
       <p>Created At: {formatDate(createdAt)}</p>
 
       <div className="tasks-container__box-buttons">
