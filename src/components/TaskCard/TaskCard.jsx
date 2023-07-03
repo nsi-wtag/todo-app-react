@@ -15,7 +15,11 @@ function TaskCard({ task }) {
   return (
     <div className="tasks-container__box">
       {isEditing ? (
-        <EditTaskCard taskTitle={taskTitle} onToggleEditTask={toggleEditTask} />
+        <EditTaskCard
+          taskId={taskId}
+          taskTitle={taskTitle}
+          onToggleEditTask={toggleEditTask}
+        />
       ) : (
         <TaskCardPreview
           taskId={taskId}
