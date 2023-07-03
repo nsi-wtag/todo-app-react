@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
-import { editTask } from "src/store/task/actions/taskActions";
+import { editTask, markTaskDone } from "src/store/task/actions/taskActions";
 import { sanitizeText } from "src/utils/sanitizeText";
 import DeleteButton from "src/components/Buttons/DeleteButton/DeleteButton";
+import DoneButton from "src/components/Buttons/DoneButton/DoneButton";
 import "src/components/AddTaskCard/AddTaskCard.scss";
 
 function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
@@ -28,6 +29,11 @@ function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
     setInputText(taskTitle);
   }
 
+  function handleDone() {
+    dispatch(markTaskDone(taskId));
+    handleSave();
+  }
+
   return (
     <>
       <textarea
@@ -48,6 +54,7 @@ function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
           Save
         </button>
         <DeleteButton onDelete={handleDelete} />
+        <DoneButton onDone={handleDone} />
       </div>
     </>
   );
