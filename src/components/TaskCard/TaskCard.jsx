@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import EditTaskCard from "../EditTaskCard/EditTaskCard";
-import TaskCardPreview from "../TaskCardPreview/TaskCardPreview";
+import EditTaskCard from "src/components/EditTaskCard/EditTaskCard";
+import TaskCardPreview from "src/components/TaskCardPreview/TaskCardPreview";
 import "src/components/TaskCardPreview/TaskCardPreview.scss";
 
 function TaskCard({ task }) {
