@@ -1,6 +1,6 @@
 import { taskActionTypes } from "src/store/task/types/taskTypes";
 
-const { ADD_TASK, DELETE_TASK, DONE_TASK } = taskActionTypes;
+const { ADD_TASK, DELETE_TASK, DONE_TASK, EDIT_TASK } = taskActionTypes;
 
 export const addTask = (task) => {
   task.taskId = Date.now().toString();
@@ -25,5 +25,12 @@ export const markTaskDone = (taskId) => {
   return {
     type: DONE_TASK,
     payload: taskId,
+  };
+};
+
+export const editTask = (task) => {
+  return {
+    type: EDIT_TASK,
+    payload: task,
   };
 };
