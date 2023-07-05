@@ -2,9 +2,14 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { editTask, markTaskDone } from "src/store/task/actions/taskActions";
+import {
+  ALT_TEXT_DELETE_ICON,
+  ALT_TEXT_DONE_ICON,
+  ICON_DELETE,
+  ICON_DONE,
+} from "src/common/constants";
 import { sanitizeText } from "src/utils/sanitizeText";
-import DeleteButton from "src/components/Buttons/DeleteButton/DeleteButton";
-import DoneButton from "src/components/Buttons/DoneButton/DoneButton";
+import IconButton from "src/components/Buttons/IconButton/IconButton";
 import "src/components/AddTaskCard/AddTaskCard.scss";
 
 function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
@@ -53,8 +58,16 @@ function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
         >
           Save
         </button>
-        <DeleteButton onDelete={handleDelete} />
-        <DoneButton onDone={handleDone} />
+        <IconButton
+          buttonSrc={ICON_DELETE}
+          buttonAltText={ALT_TEXT_DELETE_ICON}
+          onAction={handleDelete}
+        />
+        <IconButton
+          buttonSrc={ICON_DONE}
+          buttonAltText={ALT_TEXT_DONE_ICON}
+          onAction={handleDone}
+        />
       </div>
     </>
   );

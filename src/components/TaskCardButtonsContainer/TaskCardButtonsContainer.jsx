@@ -1,8 +1,14 @@
 import PropTypes from "prop-types";
 import { getDaysToCompleteTask } from "src/utils/compareDate";
-import DeleteButton from "src/components/Buttons/DeleteButton/DeleteButton";
-import DoneButton from "src/components/Buttons/DoneButton/DoneButton";
-import EditButton from "src/components/Buttons/EditButton/EditButton";
+import {
+  ALT_TEXT_DELETE_ICON,
+  ALT_TEXT_DONE_ICON,
+  ALT_TEXT_EDIT_ICON,
+  ICON_DELETE,
+  ICON_DONE,
+  ICON_EDIT,
+} from "src/common/constants";
+import IconButton from "src/components/Buttons/IconButton/IconButton";
 
 function TaskCardButtonsContainer({
   isTaskDone,
@@ -17,13 +23,25 @@ function TaskCardButtonsContainer({
 
   return (
     <>
-      <DeleteButton onDelete={onDeleteTask} />
+      <IconButton
+        buttonSrc={ICON_DELETE}
+        buttonAltText={ALT_TEXT_DELETE_ICON}
+        onAction={onDeleteTask}
+      />
       {isTaskDone ? (
         <p>{`Completed in ${numberOfDays} ${dayStr}`}</p>
       ) : (
         <>
-          <EditButton onEdit={onEditTask} />
-          <DoneButton onDone={onTaskDone} />
+          <IconButton
+            buttonSrc={ICON_EDIT}
+            buttonAltText={ALT_TEXT_EDIT_ICON}
+            onAction={onEditTask}
+          />
+          <IconButton
+            buttonSrc={ICON_DONE}
+            buttonAltText={ALT_TEXT_DONE_ICON}
+            onAction={onTaskDone}
+          />
         </>
       )}
     </>
