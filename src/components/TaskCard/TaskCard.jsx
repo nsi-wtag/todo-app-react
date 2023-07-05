@@ -1,7 +1,8 @@
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
 import { deleteTask } from "src/store/task/actions/taskActions";
-import DeleteButton from "src/components/Buttons/DeleteButton/DeleteButton";
+import { ALT_TEXT_DELETE_ICON, ICON_DELETE } from "src/common/constants";
+import IconButton from "src/components/Buttons/IconButton/IconButton";
 import "./TaskCard.scss";
 
 function TaskCard({ taskId, taskTitle, createdAt }) {
@@ -15,7 +16,11 @@ function TaskCard({ taskId, taskTitle, createdAt }) {
     <div className="tasks-container__box">
       <h3>{taskTitle}</h3>
       <p>Created At: {createdAt}</p>
-      <DeleteButton onDelete={handleDeleteTask} />
+      <IconButton
+        buttonSrc={ICON_DELETE}
+        buttonAltText={ALT_TEXT_DELETE_ICON}
+        onAction={handleDeleteTask}
+      />
     </div>
   );
 }
