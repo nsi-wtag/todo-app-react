@@ -67,6 +67,7 @@ function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
           buttonSrc={ICON_DONE}
           buttonAltText={ALT_TEXT_DONE_ICON}
           onAction={handleDone}
+          isDisabled={isSaveButtonDisabled}
         />
       </div>
     </>
