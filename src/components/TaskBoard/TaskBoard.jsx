@@ -25,11 +25,9 @@ function TaskBoard() {
   const isLoadLess =
     visibleTaskRange >= totalTasks && totalTasks > MAX_TASK_PER_PAGE;
 
-  console.log(numberOfTasksOnScreen);
-
-  const showMoreItems = () => {
+  function showMoreItems() {
     setVisibleTaskRange((prevValue) => prevValue + MAX_TASK_PER_PAGE);
-  };
+  }
 
   function showLessItems() {
     setVisibleTaskRange(MAX_TASK_PER_PAGE);
@@ -47,7 +45,6 @@ function TaskBoard() {
   useEffect(() => {
     if (numberOfTasksOnScreen <= MAX_TASK_PER_PAGE) {
       showLessItems();
-      console.log("Triggered");
     }
   }, [numberOfTasksOnScreen]);
 
