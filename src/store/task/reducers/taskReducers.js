@@ -1,6 +1,4 @@
-import { taskActionTypes } from "src/store/task/types/taskTypes";
-
-const { ADD_TASK } = taskActionTypes;
+import { ADD_TASK } from "src/store/task/types/taskTypes";
 
 const initialTasksState = {
   tasks: [],

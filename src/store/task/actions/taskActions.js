@@ -1,7 +1,5 @@
-import { taskActionTypes } from "src/store/task/types/taskTypes";
+import { ADD_TASK } from "src/store/task/types/taskTypes";
 import { formatDate } from "src/utils/formatDate";
-
-const { ADD_TASK } = taskActionTypes;
 
 export const addTask = (task) => {
   task.id = Date.now().toString();
