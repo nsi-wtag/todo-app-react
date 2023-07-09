@@ -11,6 +11,7 @@ import {
 import { sanitizeText } from "src/utils/sanitizeText";
 import IconButton from "src/components/Buttons/IconButton/IconButton";
 import "src/components/AddTaskCard/AddTaskCard.scss";
+import classNames from "classnames";
 
 function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
   const [inputText, setInputText] = useState(taskTitle);
@@ -50,9 +51,9 @@ function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
 
       <div className="tasks-container__box-buttons">
         <button
-          className={`task__save-button ${
-            isSaveButtonDisabled ? "task__save-button-disabled " : null
-          }`}
+          className={classNames("task__save-button", {
+            "task__save-button-disabled": isSaveButtonDisabled,
+          })}
           disabled={isSaveButtonDisabled}
           onClick={handleSave}
         >
