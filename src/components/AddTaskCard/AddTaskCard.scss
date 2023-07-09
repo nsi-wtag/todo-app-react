@@ -1,8 +1,8 @@
 .task {
   &__save-button {
-    background-color: $colorButtonPrimary;
+    background-color: $button-primary;
     border: none;
-    color: $colorPrimaryWhite;
+    color: $primary-white;
     cursor: pointer;
     font-size: calc($sp-2 * 7);
     justify-self: end;

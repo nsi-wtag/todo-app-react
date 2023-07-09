@@ -1,6 +1,6 @@
 .navbar {
   align-items: center;
-  background-color: $colorSecondaryWhite;
+  background-color: $secondary-white;
   display: flex;
   justify-content: space-between;
   margin-bottom: $sp-24;
@@ -11,14 +11,14 @@
     display: flex;
 
     &-button {
-      background-color: $colorSecondaryBlack;
+      background-color: $secondary-black;
       border: none;
-      color: $colorPrimaryWhite;
+      color: $primary-white;
       padding: $sp-4 $sp-12;
     }
 
     &-input {
-      border: calc($sp-2 / 2) solid $colorTartiaryGray;
+      border: calc($sp-2 / 2) solid $tartiary-gray;
       margin-right: $sp-4;
       padding: $sp-4;
     }
