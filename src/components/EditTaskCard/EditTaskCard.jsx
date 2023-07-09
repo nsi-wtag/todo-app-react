@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 import { editTask, markTaskDone } from "src/store/task/actions/taskActions";
 import {
   ALT_TEXT_DELETE_ICON,
@@ -11,7 +12,6 @@ import {
 import { sanitizeText } from "src/utils/sanitizeText";
 import IconButton from "src/components/Buttons/IconButton/IconButton";
 import "src/components/AddTaskCard/AddTaskCard.scss";
-import classNames from "classnames";
 
 function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
   const [inputText, setInputText] = useState(taskTitle);
