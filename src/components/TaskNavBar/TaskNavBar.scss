@@ -1,15 +1,15 @@
 .task-navbar {
   align-items: center;
-  background-color: $colorSecondaryWhite;
+  background-color: $secondary-white;
   display: flex;
   justify-content: space-between;
   margin-bottom: $sp-12;
   padding: $sp-12;
 
   &__button {
-    background-color: $colorSecondaryBlack;
+    background-color: $secondary-black;
     border: none;
-    color: $colorPrimaryWhite;
+    color: $primary-white;
     cursor: pointer;
     padding: $sp-4 $sp-12;
   }
@@ -18,7 +18,7 @@
     display: flex;
 
     & > .task-navbar__filter {
-      background-color: $colorSecondaryWhite;
+      background-color: $secondary-white;
       border: none;
       cursor: pointer;
       margin-right: $sp-4;
@@ -26,7 +26,7 @@
       transition: background-color $tt-03;
 
       &:hover {
-        background-color: $colorTartiaryGray
+        background-color: $tartiary-gray
       }
 
       &:not(:last-child) {
