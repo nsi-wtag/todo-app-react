@@ -1,5 +1,6 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 import { sanitizeText } from "src/utils/sanitizeText";
 import "./AddTaskCard.scss";
 
@@ -26,9 +27,9 @@ function AddTaskCard({ onCreateTask }) {
       />
 
       <button
-        className={`task__save-button ${
-          isTaskButtonDisabled ? "task__save-button-disabled " : null
-        }`}
+        className={classNames("task__save-button", {
+          "task__save-button-disabled": isTaskButtonDisabled,
+        })}
         disabled={isTaskButtonDisabled}
         onClick={handleAddTask}
       >
