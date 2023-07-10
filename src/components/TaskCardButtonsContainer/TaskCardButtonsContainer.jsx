@@ -24,23 +24,23 @@ function TaskCardButtonsContainer({
   return (
     <>
       <IconButton
-        buttonSrc={ICON_DELETE}
+        icon={ICON_DELETE}
         buttonAltText={ALT_TEXT_DELETE_ICON}
-        onAction={onDeleteTask}
+        onClick={onDeleteTask}
       />
       {isTaskDone ? (
         <p>{`Completed in ${numberOfDays} ${dayStr}`}</p>
       ) : (
         <>
           <IconButton
-            buttonSrc={ICON_EDIT}
+            icon={ICON_EDIT}
             buttonAltText={ALT_TEXT_EDIT_ICON}
-            onAction={onEditTask}
+            onClick={onEditTask}
           />
           <IconButton
-            buttonSrc={ICON_DONE}
+            icon={ICON_DONE}
             buttonAltText={ALT_TEXT_DONE_ICON}
-            onAction={onTaskDone}
+            onClick={onTaskDone}
           />
         </>
       )}

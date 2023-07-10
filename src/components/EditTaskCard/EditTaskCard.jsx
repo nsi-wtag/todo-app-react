@@ -60,14 +60,14 @@ function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
           Save
         </button>
         <IconButton
-          buttonSrc={ICON_DELETE}
+          icon={ICON_DELETE}
           buttonAltText={ALT_TEXT_DELETE_ICON}
-          onAction={handleDelete}
+          onClick={handleDelete}
         />
         <IconButton
-          buttonSrc={ICON_DONE}
+          icon={ICON_DONE}
           buttonAltText={ALT_TEXT_DONE_ICON}
-          onAction={handleDone}
+          onClick={handleDone}
           isDisabled={isSaveButtonDisabled}
         />
       </div>

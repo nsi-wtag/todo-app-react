@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
 import "src/components/Buttons/buttons.scss";
 
-function IconButton({ buttonSrc, buttonAltText, onAction, isDisabled }) {
+function IconButton({ icon, buttonAltText, onClick, isDisabled }) {
   return (
     <button
-      onClick={onAction}
+      onClick={onClick}
       className={`button-icon ${isDisabled && "button-icon-disabled"}`}
       disabled={isDisabled}
     >
-      <img src={buttonSrc} alt={buttonAltText} />
+      <img src={icon} alt={buttonAltText} />
     </button>
   );
 }
@@ -18,9 +18,9 @@ IconButton.defaultProps = {
 };
 
 IconButton.propTypes = {
-  buttonSrc: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired,
   buttonAltText: PropTypes.string.isRequired,
-  onAction: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
   isDisabled: PropTypes.bool,
 };
 
