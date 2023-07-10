@@ -19,7 +19,7 @@ function TaskCard({ taskId, taskTitle, createdAt }) {
       <IconButton
         icon={ICON_DELETE}
         buttonAltText={ALT_TEXT_DELETE_ICON}
-        onAction={handleDeleteTask}
+        onClick={handleDeleteTask}
       />
     </div>
   );

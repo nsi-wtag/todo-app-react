@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import "src/components/Buttons/buttons.scss";
 
-function IconButton({ icon, buttonAltText, onAction }) {
+function IconButton({ icon, buttonAltText, onClick }) {
   return (
-    <button onClick={onAction} className="button-icon">
+    <button onClick={onClick} className="button-icon">
       <img src={icon} alt={buttonAltText} />
     </button>
   );
@@ -12,7 +12,7 @@ function IconButton({ icon, buttonAltText, onAction }) {
 IconButton.propTypes = {
   icon: PropTypes.string.isRequired,
   buttonAltText: PropTypes.string.isRequired,
-  onAction: PropTypes.func.isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default IconButton;
