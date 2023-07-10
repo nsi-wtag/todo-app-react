@@ -5,7 +5,8 @@ function TaskList({ tasks }) {
     <TaskCard
       taskTitle={task.taskTitle}
       createdAt={task.createdAt}
-      key={task.id}
+      taskId={task.taskId}
+      key={task.taskId}
     />
   ));
 }
