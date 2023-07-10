@@ -17,7 +17,7 @@ function TaskCard({ taskId, taskTitle, createdAt }) {
       <h3>{taskTitle}</h3>
       <p>Created At: {createdAt}</p>
       <IconButton
-        buttonSrc={ICON_DELETE}
+        icon={ICON_DELETE}
         buttonAltText={ALT_TEXT_DELETE_ICON}
         onAction={handleDeleteTask}
       />
