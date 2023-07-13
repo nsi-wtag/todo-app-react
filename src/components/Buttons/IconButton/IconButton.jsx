@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
+import classNames from "classnames";
 import "src/components/Buttons/buttons.scss";
 
 function IconButton({ icon, buttonAltText, onClick, isDisabled }) {
   return (
     <button
       onClick={onClick}
-      className={`button-icon ${isDisabled && "button-icon-disabled"}`}
+      className={classNames("button-icon", {
+        "button-icon-disabled": isDisabled,
+      })}
       disabled={isDisabled}
     >
       <img src={icon} alt={buttonAltText} />
