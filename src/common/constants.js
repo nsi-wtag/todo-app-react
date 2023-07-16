@@ -1,6 +1,6 @@
 export const PLACEHOLDER_SEARCH_TASK = "Search...";
 
-export const FILTER_TASKS_BUTTON_TEXT_ARRAY = ["All", "Incomplete", "Complete"];
+export const TASKS_BUTTON_FILTER_TEXT = ["All", "Incomplete", "Complete"];
 
-export const TYPE_SUBMIT = "submit";
+export const INPUT_TYPE_SUBMIT = "submit";
 export const TYPE_TEXT = "text";
