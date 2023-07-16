@@ -1,8 +1,10 @@
 export function formatDate(date) {
+  const format = "2-digit";
+
   const dateFormatOptions = {
-    year: "2-digit",
-    month: "2-digit",
-    day: "2-digit",
+    year: format,
+    month: format,
+    day: format,
   };
 
   const formattedDate = new Intl.DateTimeFormat("de", dateFormatOptions).format(
