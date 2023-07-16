@@ -1,17 +1,17 @@
 import PropTypes from "prop-types";
 import "./TaskCard.scss";
 
-function TaskCard({ taskTitle, createdAt }) {
+function TaskCard({ title, createdAt }) {
   return (
     <div className="tasks-container__box">
-      <h3>{taskTitle}</h3>
+      <h3>{title}</h3>
       <p>Created At: {createdAt}</p>
     </div>
   );
 }
 
 TaskCard.propTypes = {
-  taskTitle: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   createdAt: PropTypes.string.isRequired,
 };
 
