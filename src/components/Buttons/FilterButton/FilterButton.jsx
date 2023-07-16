@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import "src/components/TaskNavBar/TaskNavBar.scss";
+import "@components/TaskNavBar/TaskNavBar.scss";
 
 function FilterButton({ buttonText }) {
   return <button className="task-navbar__filter">{buttonText}</button>;

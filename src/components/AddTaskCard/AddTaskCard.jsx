@@ -1,7 +1,7 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { sanitizeText } from "src/utils/sanitizeText";
+import { sanitizeText } from "@utils/sanitizeText";
 import "./AddTaskCard.scss";
 
 function AddTaskCard({ onCreateTask }) {

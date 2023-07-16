@@ -1,4 +1,4 @@
-import { ADD_TASK } from "src/store/task/types/taskTypes";
+import { ADD_TASK } from "@store/task/types/taskTypes";
 
 const initialTasksState = {
   tasks: [],

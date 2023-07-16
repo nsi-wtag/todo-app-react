@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
-import { FILTER_TASKS_BUTTON_TEXT_ARRAY } from "src/common/constants";
-import FilterButton from "src/components/Buttons/FilterButton/FilterButton";
+import { FILTER_TASKS_BUTTON_TEXT_ARRAY } from "@common/constants";
+import FilterButton from "@components/Buttons/FilterButton/FilterButton";
 import "./TaskNavBar.scss";
 
 function TaskNavBar({ onCreateButtonClick }) {

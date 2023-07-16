@@ -2,7 +2,7 @@ import {
   PLACEHOLDER_SEARCH_TASK,
   TYPE_SUBMIT,
   TYPE_TEXT,
-} from "src/common/constants";
+} from "@common/constants";
 import "./Header.scss";
 
 function Header() {

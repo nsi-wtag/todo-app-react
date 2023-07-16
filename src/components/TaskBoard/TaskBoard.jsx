@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addTask } from "src/store/task/actions/taskActions";
-import TaskNavBar from "src/components/TaskNavBar/TaskNavBar";
-import AddTaskCard from "src/components/AddTaskCard/AddTaskCard";
-import TaskList from "src/components/TaskList/TaskList";
+import { addTask } from "@store/task/actions/taskActions";
+import TaskNavBar from "@components/TaskNavBar/TaskNavBar";
+import AddTaskCard from "@components/AddTaskCard/AddTaskCard";
+import TaskList from "@components/TaskList/TaskList";
 import "./TaskBoard.scss";
 
 function TaskBoard() {
