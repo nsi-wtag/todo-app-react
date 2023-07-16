@@ -1,6 +1,6 @@
 import {
   PLACEHOLDER_SEARCH_TASK,
-  TYPE_SUBMIT,
+  INPUT_TYPE_SUBMIT,
   TYPE_TEXT,
 } from "@common/constants";
 import "./Header.scss";
@@ -15,7 +15,7 @@ function Header() {
           type={TYPE_TEXT}
           placeholder={PLACEHOLDER_SEARCH_TASK}
         />
-        <button className="navbar__search-button" type={TYPE_SUBMIT}>
+        <button className="navbar__search-button" type={INPUT_TYPE_SUBMIT}>
           Search
         </button>
       </div>
