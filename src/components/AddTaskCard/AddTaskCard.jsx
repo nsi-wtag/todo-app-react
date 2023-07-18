@@ -9,7 +9,7 @@ function AddTaskCard({ onCreateTask }) {
   const sanitizedTaskTitle = sanitizeText(taskTitle);
   const isTaskTitleEmpty = sanitizedTaskTitle === "";
 
-  function handleChange(event) {
+  function handleTaskNameChange(event) {
     setTaskTitle(event.target.value);
   }
 
@@ -23,7 +23,7 @@ function AddTaskCard({ onCreateTask }) {
         className="task__textarea"
         autoFocus
         value={taskTitle}
-        onChange={handleChange}
+        onChange={handleTaskNameChange}
       />
 
       <button
