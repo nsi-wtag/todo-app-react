@@ -7,13 +7,13 @@ import TaskList from "@components/TaskList/TaskList";
 import "./TaskBoard.scss";
 
 function TaskBoard() {
-  const [isCreateButtonClicked, setIsCreateButtonClicked] = useState(false);
+  const [isCreateTask, setIsCreateTask] = useState(false);
 
   const tasks = useSelector((state) => state.task.tasks);
   const dispatch = useDispatch();
 
   function handleCreateButton() {
-    setIsCreateButtonClicked(!isCreateButtonClicked);
+    setIsCreateTask(!isCreateTask);
   }
 
   function handleCreateTask(taskTitle) {
@@ -26,9 +26,7 @@ function TaskBoard() {
       <TaskNavBar onCreateButtonClick={handleCreateButton} />
 
       <div className="tasks-container">
-        {isCreateButtonClicked && (
-          <AddTaskCard onCreateTask={handleCreateTask} />
-        )}
+        {isCreateTask && <AddTaskCard onCreateTask={handleCreateTask} />}
 
         <TaskList tasks={tasks} />
       </div>
