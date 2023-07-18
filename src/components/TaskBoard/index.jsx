@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addTask } from "@store/task/actions/taskActions";
 import TaskActions from "@components/TaskActions";
 import NewTaskCard from "@components/NewTaskCard";
-import TaskList from "@components/TaskList/TaskList";
+import TaskList from "@components/TaskList";
 import "./styles.scss";
 
 function TaskBoard() {
