@@ -18,7 +18,7 @@ function TaskBoard() {
 
   function handleCreateTask(taskTitle) {
     handleCreateButton();
-    dispatch(addTask({ taskTitle: taskTitle }));
+    dispatch(addTask(taskTitle));
   }
 
   return (
