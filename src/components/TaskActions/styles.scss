@@ -1,8 +1,5 @@
 .task-navbar {
-  align-items: center;
   background-color: $secondary-white;
-  display: flex;
-  justify-content: space-between;
   margin-bottom: $sp-12;
   padding: $sp-12;
 
@@ -15,8 +12,6 @@
   }
 
   &__filters {
-    display: flex;
-
     & > .task-navbar__filter {
       background-color: $secondary-white;
       border: none;

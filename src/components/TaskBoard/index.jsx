@@ -25,7 +25,7 @@ function TaskBoard() {
     <>
       <TaskActions onCreateTask={handleCreateButton} />
 
-      <div className="tasks-container">
+      <div className="tasks-container d-grid justify-center">
         {isCreateTask && <NewTaskCard onCreateTask={handleCreateTask} />}
 
         <TaskList tasks={tasks} />

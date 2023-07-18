@@ -1,15 +1,9 @@
 .navbar {
-  align-items: center;
   background-color: $secondary-white;
-  display: flex;
-  justify-content: space-between;
   margin-bottom: $sp-24;
   padding: $sp-12;
 
   &__search {
-    align-items: center;
-    display: flex;
-
     &-button {
       background-color: $secondary-black;
       border: none;

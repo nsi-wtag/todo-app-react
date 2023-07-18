@@ -4,12 +4,13 @@ import {
   TYPE_TEXT,
 } from "@common/constants";
 import "./styles.scss";
+import "@styles/_helpers.scss";
 
 function Header() {
   return (
-    <nav className="navbar">
+    <nav className="navbar align-center d-flex justify-between">
       <div className="navbar__title">Todos</div>
-      <div className="navbar__search">
+      <div className="navbar__search align-center d-flex">
         <input
           className="navbar__search-input"
           type={TYPE_TEXT}

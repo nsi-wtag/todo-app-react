@@ -7,12 +7,12 @@ function TaskActions({ onCreateTask }) {
   return (
     <>
       <h2>Add Tasks</h2>
-      <nav className="task-navbar">
+      <nav className="task-navbar align-center d-flex justify-between">
         <button className="task-navbar__button" onClick={onCreateTask}>
           Create
         </button>
 
-        <div className="task-navbar__filters">
+        <div className="task-navbar__filters d-flex">
           {TASKS_BUTTON_FILTER_TEXT.map((label, index) => (
             <FilterButton label={label} key={index} />
           ))}
