@@ -23,7 +23,7 @@ function TaskBoard() {
 
   return (
     <>
-      <TaskNavBar onCreateButtonClick={handleCreateButton} />
+      <TaskNavBar onCreateTask={handleCreateButton} />
 
       <div className="tasks-container">
         {isCreateTask && <AddTaskCard onCreateTask={handleCreateTask} />}

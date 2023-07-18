@@ -3,12 +3,12 @@ import { TASKS_BUTTON_FILTER_TEXT } from "@common/constants";
 import FilterButton from "@components/Buttons/FilterButton/FilterButton";
 import "./TaskNavBar.scss";
 
-function TaskNavBar({ onCreateButtonClick }) {
+function TaskNavBar({ onCreateTask }) {
   return (
     <>
       <h2>Add Tasks</h2>
       <nav className="task-navbar">
-        <button className="task-navbar__button" onClick={onCreateButtonClick}>
+        <button className="task-navbar__button" onClick={onCreateTask}>
           Create
         </button>
 
@@ -23,7 +23,7 @@ function TaskNavBar({ onCreateButtonClick }) {
 }
 
 TaskNavBar.propTypes = {
-  onCreateButtonClick: PropTypes.func.isRequired,
+  onCreateTask: PropTypes.func.isRequired,
 };
 
 export default TaskNavBar;
