@@ -1,11 +1,13 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
-import { sanitizeText } from "@utils/sanitizeText";
+import { useSanitized } from "@hooks/useSanitized";
 import "./styles.scss";
 
 function NewTaskCard({ onCreateTask }) {
   const [taskTitle, setTaskTitle] = useState("");
+  const { sanitizeText } = useSanitized();
+
   const sanitizedTaskTitle = sanitizeText(taskTitle);
   const isTaskTitleEmpty = sanitizedTaskTitle === "";
 
