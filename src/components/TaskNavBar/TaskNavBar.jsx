@@ -13,8 +13,8 @@ function TaskNavBar({ onCreateButtonClick }) {
         </button>
 
         <div className="task-navbar__filters">
-          {TASKS_BUTTON_FILTER_TEXT.map((filterButtonText, index) => (
-            <FilterButton buttonText={filterButtonText} key={index} />
+          {TASKS_BUTTON_FILTER_TEXT.map((label, index) => (
+            <FilterButton label={label} key={index} />
           ))}
         </div>
       </nav>
