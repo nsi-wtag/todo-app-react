@@ -1,7 +1,11 @@
+import Header from "@components/Header";
+import TaskBoard from "@components/TaskBoard";
+
 function App() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Header />
+      <TaskBoard />
     </>
   );
 }

@@ -1,0 +1,5 @@
+.tasks-container {
+  gap: $sp-48;
+  grid-auto-rows: calc($sp-48 * 3.12);
+  grid-template-columns: repeat(3, calc($sp-48 * 7.29));
+}

@@ -1,0 +1,25 @@
+.navbar {
+  background-color: $secondary-white;
+  margin-bottom: $sp-24;
+  padding: $sp-12;
+
+  &__search {
+    &-button {
+      background-color: $secondary-black;
+      border: none;
+      color: $primary-white;
+      padding: $sp-4 $sp-12;
+    }
+
+    &-input {
+      border: calc($sp-2 / 2) solid $tartiary-gray;
+      margin-right: $sp-4;
+      padding: $sp-4;
+    }
+  }
+
+  &__title {
+    font-size: calc($sp-2 * 10);
+    font-weight: bold;
+  }
+}
