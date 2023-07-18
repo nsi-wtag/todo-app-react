@@ -7,9 +7,5 @@ export function formatDate(date) {
     day: format,
   };
 
-  const formattedDate = new Intl.DateTimeFormat("de", dateFormatOptions).format(
-    date
-  );
-
-  return formattedDate;
+  return new Intl.DateTimeFormat("de", dateFormatOptions).format(date);
 }
