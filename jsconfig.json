@@ -5,6 +5,7 @@
       "@assets": ["src/assets/"],
       "@common/*": ["src/common/*"],
       "@components/*": ["src/components/*"],
+      "@hooks/*": ["src/hooks/*"],
       "@store/*": ["src/store/*"],
       "@styles/*": ["src/styles/*"],
       "@utils/*": ["src/utils/*"],
