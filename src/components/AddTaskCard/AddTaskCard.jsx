@@ -7,7 +7,7 @@ import "./AddTaskCard.scss";
 function AddTaskCard({ onCreateTask }) {
   const [taskTitle, setTaskTitle] = useState("");
   const sanitizedTaskTitle = sanitizeText(taskTitle);
-  const isTaskButtonDisabled = sanitizedTaskTitle === "";
+  const isTaskTitleEmpty = sanitizedTaskTitle === "";
 
   function handleChange(event) {
     setTaskTitle(event.target.value);
@@ -28,9 +28,9 @@ function AddTaskCard({ onCreateTask }) {
 
       <button
         className={classNames("task__save-button", {
-          "task__save-button-disabled": isTaskButtonDisabled,
+          "task__save-button-disabled": isTaskTitleEmpty,
         })}
-        disabled={isTaskButtonDisabled}
+        disabled={isTaskTitleEmpty}
         onClick={handleAddTask}
       >
         Add Task
