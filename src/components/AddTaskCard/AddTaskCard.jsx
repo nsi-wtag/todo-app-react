@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import classNames from "classnames";
 import { sanitizeText } from "src/utils/sanitizeText";
 import "./AddTaskCard.scss";
+import { displayToastNotification } from "src/utils/toast";
 
 function AddTaskCard({ onCreateTask }) {
   const [taskTitle, setTaskTitle] = useState("");
@@ -15,6 +16,7 @@ function AddTaskCard({ onCreateTask }) {
 
   function handleAddTask() {
     onCreateTask(sanitizedTaskTitle);
+    displayToastNotification("Task Added", "success");
   }
 
   return (
