@@ -5,6 +5,7 @@ import { deleteTask, markTaskDone } from "src/store/task/actions/taskActions";
 import { formatDate } from "src/utils/formatDate";
 import TaskCardButtonsContainer from "src/components/TaskCardButtonsContainer/TaskCardButtonsContainer";
 import "./TaskCardPreview.scss";
+import { displayToastNotification } from "src/utils/toast";
 
 function TaskCardPreview({
   taskId,
@@ -18,10 +19,12 @@ function TaskCardPreview({
 
   function handleDeleteTask() {
     dispatch(deleteTask(taskId));
+    displayToastNotification("Task Deleted", "error");
   }
 
   function handleTaskDone() {
     dispatch(markTaskDone(taskId));
+    displayToastNotification("Task Completed", "success");
   }
 
   function handleEditTask() {

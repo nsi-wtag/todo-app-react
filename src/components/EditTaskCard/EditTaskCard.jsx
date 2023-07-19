@@ -12,6 +12,7 @@ import {
 import { sanitizeText } from "src/utils/sanitizeText";
 import IconButton from "src/components/Buttons/IconButton/IconButton";
 import "src/components/AddTaskCard/AddTaskCard.scss";
+import { displayToastNotification } from "src/utils/toast";
 
 function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
   const [inputText, setInputText] = useState(taskTitle);
@@ -33,11 +34,13 @@ function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
 
   function handleDelete() {
     setInputText(taskTitle);
+    displayToastNotification("Task Title Reset", "error");
   }
 
   function handleDone() {
     dispatch(markTaskDone(taskId));
     handleSave();
+    displayToastNotification("Task Completed", "success");
   }
 
   return (
