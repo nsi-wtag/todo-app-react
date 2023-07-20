@@ -30,6 +30,7 @@ function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
     }
 
     onToggleEditTask();
+    displayToastNotification("Task Updated", "success");
   }
 
   function handleDelete() {
