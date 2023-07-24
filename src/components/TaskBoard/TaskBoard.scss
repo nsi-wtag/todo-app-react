@@ -1,3 +1,16 @@
+.tasks-board-container {
+  &__buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: calc($sp-2 * 5);
+  }
+
+  &__load-button {
+    cursor: pointer;
+    margin: 0 calc($sp-2 * 2.5);
+  }
+}
+
 .tasks-container {
   display: grid;
   gap: $sp-48;

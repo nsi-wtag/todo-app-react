@@ -15,5 +15,7 @@ export const ALT_TEXT_EDIT_ICON = "Edit Icon";
 
 export const FILTER_TASKS_BUTTON_TEXT_ARRAY = ["All", "Incomplete", "Complete"];
 
+export const MAX_TASK_PER_PAGE = 9;
+
 export const TYPE_SUBMIT = "submit";
 export const TYPE_TEXT = "text";
