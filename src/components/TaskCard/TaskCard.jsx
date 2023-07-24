@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 import { deleteTask, markTaskDone } from "src/store/task/actions/taskActions";
 import { formatDate } from "src/utils/formatDate";
 import TaskCardButtonsContainer from "src/components/TaskCardButtonsContainer/TaskCardButtonsContainer";
@@ -18,7 +19,7 @@ function TaskCard({ taskId, taskTitle, createdAt, taskDoneAt, isTaskDone }) {
 
   return (
     <div className="tasks-container__box">
-      <h3 className={`${isTaskDone && "task_done"}`}>{taskTitle}</h3>
+      <h3 className={classNames({ task_done: isTaskDone })}>{taskTitle}</h3>
       <p>Created At: {formatDate(createdAt)}</p>
 
       <div className="tasks-container__box-buttons">
