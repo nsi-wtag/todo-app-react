@@ -2,4 +2,14 @@
   background-color: $secondary-gray;
   border: calc($sp-2 / 2) solid $primary-gray;
   border-radius: $sp-4;
+
+  &-buttons {
+    display: flex;
+    gap: calc($sp-2 * 5);
+  }
+}
+
+.task_done {
+  color: $task-green;
+  text-decoration: line-through;
 }
