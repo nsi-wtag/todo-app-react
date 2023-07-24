@@ -3,8 +3,10 @@ import { getDaysToCompleteTask } from "src/utils/compareDate";
 import {
   ALT_TEXT_DELETE_ICON,
   ALT_TEXT_DONE_ICON,
+  ALT_TEXT_EDIT_ICON,
   ICON_DELETE,
   ICON_DONE,
+  ICON_EDIT,
 } from "src/common/constants";
 import IconButton from "src/components/Buttons/IconButton/IconButton";
 
@@ -14,6 +16,7 @@ function TaskCardButtonsContainer({
   taskDoneAt,
   onDeleteTask,
   onTaskDone,
+  onEditTask,
 }) {
   const numberOfDays = getDaysToCompleteTask(createdAt, taskDoneAt);
   const dayStr = numberOfDays > 1 ? "days" : "day";
@@ -28,11 +31,18 @@ function TaskCardButtonsContainer({
       {isTaskDone ? (
         <p>{`Completed in ${numberOfDays} ${dayStr}`}</p>
       ) : (
-        <IconButton
-          icon={ICON_DONE}
-          buttonAltText={ALT_TEXT_DONE_ICON}
-          onClick={onTaskDone}
-        />
+        <>
+          <IconButton
+            icon={ICON_EDIT}
+            buttonAltText={ALT_TEXT_EDIT_ICON}
+            onClick={onEditTask}
+          />
+          <IconButton
+            icon={ICON_DONE}
+            buttonAltText={ALT_TEXT_DONE_ICON}
+            onClick={onTaskDone}
+          />
+        </>
       )}
     </>
   );
@@ -48,6 +58,7 @@ TaskCardButtonsContainer.propTypes = {
   taskDoneAt: PropTypes.instanceOf(Date),
   onDeleteTask: PropTypes.func.isRequired,
   onTaskDone: PropTypes.func.isRequired,
+  onEditTask: PropTypes.func.isRequired,
 };
 
 export default TaskCardButtonsContainer;

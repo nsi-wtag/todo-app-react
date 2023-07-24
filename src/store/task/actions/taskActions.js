@@ -2,6 +2,7 @@ import {
   ADD_TASK,
   DELETE_TASK,
   DONE_TASK,
+  EDIT_TASK,
 } from "src/store/task/types/taskTypes";
 
 export const addTask = (task) => {
@@ -27,5 +28,12 @@ export const markTaskDone = (taskId) => {
   return {
     type: DONE_TASK,
     payload: taskId,
+  };
+};
+
+export const editTask = (task) => {
+  return {
+    type: EDIT_TASK,
+    payload: task,
   };
 };

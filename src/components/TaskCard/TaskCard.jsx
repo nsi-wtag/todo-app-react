@@ -1,50 +1,47 @@
-import { useDispatch } from "react-redux";
+import { useState } from "react";
 import PropTypes from "prop-types";
-import classNames from "classnames";
-import { deleteTask, markTaskDone } from "src/store/task/actions/taskActions";
-import { formatDate } from "src/utils/formatDate";
-import TaskCardButtonsContainer from "src/components/TaskCardButtonsContainer/TaskCardButtonsContainer";
-import "./TaskCard.scss";
+import EditTaskCard from "src/components/EditTaskCard/EditTaskCard";
+import TaskCardPreview from "src/components/TaskCardPreview/TaskCardPreview";
+import "src/components/TaskCardPreview/TaskCardPreview.scss";
 
-function TaskCard({ taskId, taskTitle, createdAt, taskDoneAt, isTaskDone }) {
-  const dispatch = useDispatch();
+function TaskCard({ task }) {
+  const { taskId, taskTitle, createdAt, taskDoneAt, isTaskDone } = task;
+  const [isEditing, setIsEditing] = useState(false);
 
-  function handleDeleteTask() {
-    dispatch(deleteTask(taskId));
-  }
-
-  function handleTaskDone() {
-    dispatch(markTaskDone(taskId));
+  function toggleEditTask() {
+    setIsEditing(!isEditing);
   }
 
   return (
     <div className="tasks-container__box">
-      <h3 className={classNames({ task_done: isTaskDone })}>{taskTitle}</h3>
-      <p>Created At: {formatDate(createdAt)}</p>
-
-      <div className="tasks-container__box-buttons">
-        <TaskCardButtonsContainer
+      {isEditing ? (
+        <EditTaskCard
+          taskId={taskId}
+          taskTitle={taskTitle}
+          onToggleEditTask={toggleEditTask}
+        />
+      ) : (
+        <TaskCardPreview
+          taskId={taskId}
+          taskTitle={taskTitle}
           isTaskDone={isTaskDone}
           createdAt={createdAt}
           taskDoneAt={taskDoneAt}
-          onDeleteTask={handleDeleteTask}
-          onTaskDone={handleTaskDone}
+          onToggleEditTask={toggleEditTask}
         />
-      </div>
+      )}
     </div>
   );
 }
 
-TaskCard.defaultProps = {
-  taskDoneAt: null,
-};
-
 TaskCard.propTypes = {
-  taskId: PropTypes.string.isRequired,
-  taskTitle: PropTypes.string.isRequired,
-  createdAt: PropTypes.instanceOf(Date).isRequired,
-  taskDoneAt: PropTypes.instanceOf(Date),
-  isTaskDone: PropTypes.bool.isRequired,
+  task: PropTypes.shape({
+    taskId: PropTypes.string.isRequired,
+    taskTitle: PropTypes.string.isRequired,
+    createdAt: PropTypes.instanceOf(Date).isRequired,
+    taskDoneAt: PropTypes.instanceOf(Date),
+    isTaskDone: PropTypes.bool.isRequired,
+  }),
 };
 
 export default TaskCard;

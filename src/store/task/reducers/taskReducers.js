@@ -2,6 +2,7 @@ import {
   ADD_TASK,
   DELETE_TASK,
   DONE_TASK,
+  EDIT_TASK,
 } from "src/store/task/types/taskTypes";
 
 const initialTasksState = {
@@ -45,6 +46,21 @@ export const taskReducer = (state = initialTasksState, action) => {
         ...state,
         tasks: updatedTasks,
       };
+    }
+
+    case EDIT_TASK: {
+      const updatedTasks = state.tasks.map((task) => {
+        if (task.taskId === action.payload.taskId) {
+          return {
+            ...task,
+            taskTitle: action.payload.taskTitle,
+          };
+        }
+
+        return { ...task };
+      });
+
+      return { ...state, tasks: updatedTasks };
     }
 
     default:
