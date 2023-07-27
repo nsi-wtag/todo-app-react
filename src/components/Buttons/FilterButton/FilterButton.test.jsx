@@ -1,5 +1,6 @@
 import { describe, it, expect, vi } from "vitest";
-import { render, fireEvent } from "@testing-library/react";
+import { render } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import FilterButton from "./FilterButton";
 
 describe("FilterButton", () => {
@@ -11,15 +12,16 @@ describe("FilterButton", () => {
     expect(filterButtonElement).toBeInTheDocument();
   });
 
-  it("Should call the onClick function, when clicked", () => {
+  it("Should call the onClick function, when clicked", async () => {
     const buttonText = "Testing on click";
     const onClickMock = vi.fn();
     const { getByText } = render(
       <FilterButton buttonText={buttonText} onClick={onClickMock} />
     );
     const buttonElement = getByText(buttonText);
+    const user = userEvent.setup();
 
-    fireEvent.click(buttonElement);
-    expect(onClickMock).toHaveBeenCalled(1);
+    await user.click(buttonElement);
+    expect(onClickMock).toHaveBeenCalledTimes(1);
   });
 });
