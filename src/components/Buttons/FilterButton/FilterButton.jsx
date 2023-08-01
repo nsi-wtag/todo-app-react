@@ -1,9 +1,9 @@
 import PropTypes from "prop-types";
 import "src/components/TaskNavBar/TaskNavBar.scss";
 
-function FilterButton({ buttonText, onClick }) {
+function FilterButton({ buttonText, onFilter }) {
   return (
-    <button className="task-navbar__filter" onClick={onClick}>
+    <button className="task-navbar__filter" onClick={onFilter}>
       {buttonText}
     </button>
   );
@@ -11,7 +11,7 @@ function FilterButton({ buttonText, onClick }) {
 
 FilterButton.propTypes = {
   buttonText: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
+  onFilter: PropTypes.func,
 };
 
 export default FilterButton;
