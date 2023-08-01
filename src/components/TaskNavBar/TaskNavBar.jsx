@@ -25,7 +25,7 @@ function TaskNavBar({ onCreateButtonClick }) {
             <FilterButton
               buttonText={filterButtonText}
               key={index}
-              onClick={() =>
+              onFilter={() =>
                 handleFilterButtonClick(FILTER_TASKS_BUTTON_LABELS[index])
               }
             />
