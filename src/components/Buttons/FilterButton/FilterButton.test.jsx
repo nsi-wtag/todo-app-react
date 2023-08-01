@@ -5,7 +5,7 @@ import FilterButton from "./FilterButton";
 
 describe("FilterButton", () => {
   const user = userEvent.setup();
-  const onClickMock = vi.fn();
+  const onFilterMock = vi.fn();
 
   it("Should render FilterButton component provided with a button text", () => {
     const buttonText = "Button Text";
@@ -16,14 +16,14 @@ describe("FilterButton", () => {
     expect(filterButtonElement.textContent).toBe(buttonText);
   });
 
-  it("Should call the onClick function, when clicked", async () => {
+  it("Should call the onFilter function, when clicked", async () => {
     const buttonText = "Testing on click";
     const { getByText } = render(
-      <FilterButton buttonText={buttonText} onClick={onClickMock} />
+      <FilterButton buttonText={buttonText} onFilter={onFilterMock} />
     );
     const buttonElement = getByText(buttonText);
 
     await user.click(buttonElement);
-    expect(onClickMock).toHaveBeenCalledTimes(1);
+    expect(onFilterMock).toHaveBeenCalledTimes(1);
   });
 });
