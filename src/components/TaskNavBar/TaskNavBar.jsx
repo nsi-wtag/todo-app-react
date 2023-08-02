@@ -1,9 +1,17 @@
 import PropTypes from "prop-types";
-import { FILTER_TASKS_BUTTON_TEXT_ARRAY } from "src/common/constants";
+import { useDispatch } from "react-redux";
+import { setFilterState } from "src/store/filter/actions/filterActions";
+import { FILTER_TASKS_BUTTON_LABELS } from "src/common/constants";
 import FilterButton from "src/components/Buttons/FilterButton/FilterButton";
 import "./TaskNavBar.scss";
 
 function TaskNavBar({ onCreateButtonClick }) {
+  const dispatch = useDispatch();
+
+  function handleFilterButtonClick(buttonLabel) {
+    dispatch(setFilterState(buttonLabel));
+  }
+
   return (
     <>
       <h2>Add Tasks</h2>
@@ -13,8 +21,14 @@ function TaskNavBar({ onCreateButtonClick }) {
         </button>
 
         <div className="task-navbar__filters">
-          {FILTER_TASKS_BUTTON_TEXT_ARRAY.map((filterButtonText, index) => (
-            <FilterButton buttonText={filterButtonText} key={index} />
+          {FILTER_TASKS_BUTTON_LABELS.map((filterButtonText, index) => (
+            <FilterButton
+              buttonText={filterButtonText}
+              key={index}
+              onFilter={() =>
+                handleFilterButtonClick(FILTER_TASKS_BUTTON_LABELS[index])
+              }
+            />
           ))}
         </div>
       </nav>

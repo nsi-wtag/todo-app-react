@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addTask } from "src/store/task/actions/taskActions";
+import filterTasks from "src/utils/filterTasks";
 import { MAX_TASK_PER_PAGE } from "src/common/constants";
 import TaskNavBar from "src/components/TaskNavBar/TaskNavBar";
 import AddTaskCard from "src/components/AddTaskCard/AddTaskCard";
@@ -11,9 +12,11 @@ function TaskBoard() {
   const [isCreateButtonClicked, setIsCreateButtonClicked] = useState(false);
   const [visibleTaskRange, setVisibleTaskRange] = useState(MAX_TASK_PER_PAGE);
   const tasks = useSelector((state) => state.task.tasks);
+  const currentFilterState = useSelector((state) => state.filter.filterState);
+  const currentTasks = filterTasks(tasks, currentFilterState);
   const dispatch = useDispatch();
 
-  const totalTasks = tasks.length;
+  const totalTasks = currentTasks.length;
   let numberOfTasksOnScreen = totalTasks;
 
   if (isCreateButtonClicked) {
@@ -43,10 +46,14 @@ function TaskBoard() {
   }
 
   useEffect(() => {
+    showLessItems();
+  }, [currentFilterState]);
+
+  useEffect(() => {
     if (numberOfTasksOnScreen <= MAX_TASK_PER_PAGE) {
       showLessItems();
     }
-  }, [numberOfTasksOnScreen]);
+  }, [numberOfTasksOnScreen, currentFilterState]);
 
   return (
     <div className="tasks-board-container">
@@ -58,7 +65,7 @@ function TaskBoard() {
         )}
 
         <TaskList
-          tasks={tasks}
+          tasks={currentTasks}
           visibleTaskRange={visibleTaskRange}
           isCreateButtonClicked={isCreateButtonClicked}
         />

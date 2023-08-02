@@ -13,7 +13,7 @@ export const ALT_TEXT_DELETE_ICON = "Delete Icon";
 export const ALT_TEXT_DONE_ICON = "Done Icon";
 export const ALT_TEXT_EDIT_ICON = "Edit Icon";
 
-export const FILTER_TASKS_BUTTON_TEXT_ARRAY = ["All", "Incomplete", "Complete"];
+export const FILTER_TASKS_BUTTON_LABELS = ["All", "Incomplete", "Complete"];
 
 export const MAX_TASK_PER_PAGE = 9;
 
