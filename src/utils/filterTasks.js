@@ -6,10 +6,10 @@ export default function filterTasks(tasks, filterState = ALL) {
       return tasks;
     }
     case INCOMPLETE: {
-      return tasks.filter((task) => task.isTaskDone === false);
+      return tasks.filter((task) => !task.isTaskDone);
     }
     case COMPLETE: {
-      return tasks.filter((task) => task.isTaskDone === true);
+      return tasks.filter((task) => task.isTaskDone);
     }
   }
 }
