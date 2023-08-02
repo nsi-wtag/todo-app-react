@@ -20,7 +20,7 @@ function AddTaskCard({ onCreateTask }) {
   }
 
   return (
-    <div>
+    <div data-testid="add-task-card">
       <textarea
         className="task__textarea"
         autoFocus

@@ -32,7 +32,7 @@ function TaskCardPreview({
   }
 
   return (
-    <>
+    <div data-testid="preview-task-card">
       <h3 className={classNames({ task_done: isTaskDone })}>{taskTitle}</h3>
       <p>Created At: {formatDate(createdAt)}</p>
 
@@ -46,7 +46,7 @@ function TaskCardPreview({
           onEditTask={handleEditTask}
         />
       </div>
-    </>
+    </div>
   );
 }
 

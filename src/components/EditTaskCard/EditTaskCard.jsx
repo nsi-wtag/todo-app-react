@@ -45,7 +45,7 @@ function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
   }
 
   return (
-    <>
+    <div data-testid="edit-task-card">
       <textarea
         className="task__textarea"
         autoFocus
@@ -75,7 +75,7 @@ function EditTaskCard({ taskId, taskTitle, onToggleEditTask }) {
           isDisabled={isSaveButtonDisabled}
         />
       </div>
-    </>
+    </div>
   );
 }
 
